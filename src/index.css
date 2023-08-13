@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap");
+:root {
+    --clr-text: #2e2e2e;
+    --clr-primary: #1e6588;
+    --clr-accent: rgb(198, 129, 0, 0.5);
+    --clr-accent-hv: rgba(225, 128, 11, 0.7);
+    --clr-white: white;
+    --clr-bright: rgb(175, 0, 45);
+    --clr-green: rgb(1, 178, 69);
+
+    --ff-title: "Jost";
+    --ff-turkish: "Jost";
+    --ff-text: "Jost";
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    color: black;
+    font-family: var(--ff-text);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+body {
+    background-color: rgba(233, 227, 227, 0.825);
+    margin: 0 auto;
+}
+
+#root {
+    max-width: 1200px;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    background-color: var(--clr-white);
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    gap: 15px;
+}
