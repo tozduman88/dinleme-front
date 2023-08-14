@@ -1,15 +1,7 @@
 .btn {
-    background-color: rgb(157, 154, 150);
+    background-color: #1e6588;
     color: white;
-    font-size: 24px;
-    padding: 10px 30px;
-    outline: none;
-    border: none;
+    font-size: 22px;
+    padding: 10px 20px;
     border-radius: 25px;
-    min-width: 50%;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: black;
 }

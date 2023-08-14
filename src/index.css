@@ -6,7 +6,7 @@
     --clr-accent-hv: rgba(225, 128, 11, 0.7);
     --clr-white: white;
     --clr-bright: rgb(175, 0, 45);
-    --clr-green: rgb(1, 178, 69);
+    --clr-green: rgb(103, 149, 120);
 
     --ff-title: "Jost";
     --ff-turkish: "Jost";
@@ -38,15 +38,41 @@ body {
     max-width: 1200px;
     display: grid;
     place-items: center;
+    gap: 10px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    gap: 10px;
 }
 
 .container {
     background-color: var(--clr-white);
     padding: 20px;
-    width: 90%;
+    width: 100%;
     max-width: 900px;
     border-radius: 10px;
     display: grid;
     place-items: center;
     gap: 15px;
+    height: 80vh;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+textarea {
+    resize: none;
+    height: 60px;
+    max-width: 500px;
+    width: 85%;
+    margin: 10px;
+    border: 2px solid gray;
+    padding: 10px;
 }
