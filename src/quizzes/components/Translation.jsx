@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-const Translation = () => {
+const Translation = ({ text }) => {
     return (
         <>
-            <a>Посмотреть перевод</a>
+            <p>{text}</p>
         </>
     );
 };

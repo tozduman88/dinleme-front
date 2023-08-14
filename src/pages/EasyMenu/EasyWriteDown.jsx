@@ -1,3 +1,12 @@
+import { useOutletContext } from "react-router-dom";
+import WriteDownQuiz from "~/quizzes/WriteDownQuiz/WriteDownQuiz";
+
 export default function EasyWriteDown() {
-    return <p>Easy Write Down</p>;
+    const phrases = useOutletContext();
+
+    return (
+        <>
+            <WriteDownQuiz phrases={phrases} />
+        </>
+    );
 }

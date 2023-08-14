@@ -1,3 +1,11 @@
+import { useOutletContext } from "react-router-dom";
+import FillGapsQuiz from "~/quizzes/FillGapsQuiz/FillGapzQuiz";
+
 export default function MiddleFillGaps() {
-    return <p>Middle Fill Gaps</p>;
+    const phrases = useOutletContext();
+    return (
+        <>
+            <FillGapsQuiz phrases={phrases} />
+        </>
+    );
 }

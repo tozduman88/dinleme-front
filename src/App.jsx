@@ -17,17 +17,19 @@ import MiddleFillGaps from "~/pages/MiddleMenu/MiddleFillGaps";
 import MiddleWriteDown from "~/pages/MiddleMenu/MiddleWriteDown";
 import HardWriteDown from "~/pages/HardMenu/HardWriteDown";
 import HardFillGaps from "~/pages/HardMenu/HardFillGaps";
+import EasyLayout from "./layouts/EasyLayout";
+import MiddleLayout from "./layouts/MiddleLayout";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Root />}>
             <Route path="/" index element={<Home />} />
-            <Route path="easy">
+            <Route path="easy" element={<EasyLayout />}>
                 <Route index={true} element={<EasyMenu />} />
                 <Route path="write-down" element={<EasyWriteDown />} />
                 <Route path="fill-gaps" element={<EasyFillGaps />} />
             </Route>
-            <Route path="middle">
+            <Route path="middle" element={<MiddleLayout />}>
                 <Route index={true} element={<MiddleMenu />} />
                 <Route path="write-down" element={<MiddleWriteDown />} />
                 <Route path="fill-gaps" element={<MiddleFillGaps />} />
@@ -37,8 +39,6 @@ const router = createBrowserRouter(
                 <Route path="write-down" element={<HardWriteDown />} />
                 <Route path="fill-gaps" element={<HardFillGaps />} />
             </Route>
-
-            <Route path="hard" element={<HardMenu />} />
         </Route>
     )
 );

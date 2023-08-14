@@ -1,17 +1,17 @@
-import Counter from "../../../components/Counter";
-import AudioPlayer from "../../../components/AudioPlayer";
+import PropTypes from "prop-types";
+import Counter from "~/components/Counter";
+import AudioPlayer from "~/components/AudioPlayer";
 import Translation from "./Translation";
 import TextArea from "./TextArea";
-import { Button } from "../../../components/Button";
-import PropTypes from "prop-types";
+import { Button } from "~/components/Button";
 
-const Question = ({ records }) => {
+const Question = ({ phrases }) => {
     let id = 5;
     return (
         <>
             <Counter text="Фраза" currentIndex={1} length={5} />
             <AudioPlayer src={`/audio/${id}.mp3`} autoPlay={true} />
-            <Translation text={records[4].trans} />
+            <Translation text={phrases[4].trans} />
             <TextArea />
             <Button text="Проверить" />
         </>
@@ -20,5 +20,5 @@ const Question = ({ records }) => {
 
 export default Question;
 Question.propTypes = {
-    records: PropTypes.array.isRequired,
+    phrases: PropTypes.array.isRequired,
 };
