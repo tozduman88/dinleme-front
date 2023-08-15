@@ -36,6 +36,10 @@ export default function FillGapsQuiz({ phrases }) {
     useEffect(() => {
         if (state.isAnswered == true) {
             refs.current.splice(0, refs.current.length);
+            currentInputValues.current.splice(
+                0,
+                currentInputValues.current.length
+            );
         }
     }, [state.isAnswered]);
 
@@ -72,7 +76,6 @@ export default function FillGapsQuiz({ phrases }) {
         }
 
         dispatch({ type: "CHECK", payload: currentInputValues.current });
-        currentInputValues.current.splice(0, currentInputValues.current.length);
     };
 
     const onKeyDownHandler = (e) => {
@@ -167,7 +170,19 @@ export default function FillGapsQuiz({ phrases }) {
                 </>
             )}
 
-            {state.showResults && <Results />}
+            {state.showResults && (
+                <>
+                    <Results
+                        numOfCorrect={state.correctAnswersCounter}
+                        length={state.phrases.length}
+                        userAnswers={state.userAnswers}
+                    />
+                    <Button
+                        text="Ещё один раунд"
+                        onClick={() => dispatch({ type: "RESTART" })}
+                    />
+                </>
+            )}
         </>
     );
 }

@@ -6,7 +6,8 @@ export const fillGapsReducer = (state, action) => {
             const currentInputValues = action.payload;
 
             let checkedInputs = [];
-
+            console.log("correctAnswers: ", correctAnswers);
+            console.log("currentInputs: ", currentInputValues);
             for (let i = 0; i < currentInputValues.length; i++) {
                 if (
                     correctAnswers[i].toLowerCase() ===
@@ -17,6 +18,7 @@ export const fillGapsReducer = (state, action) => {
                     checkedInputs.push(false);
                 }
             }
+            console.log("checkedInputs ", checkedInputs);
             const answerIsCorrect = checkedInputs.every(
                 (item) => item === true
             );
@@ -26,9 +28,8 @@ export const fillGapsReducer = (state, action) => {
 
             const answer = {
                 id: state.phrases[state.currentQuestionIndex].id,
-                correctText: state.phrases[state.currentQuestionIndex].text,
-                translation:
-                    state.phrases[state.currentQuestionIndex].translation,
+                text: state.phrases[state.currentQuestionIndex].text,
+                trans: state.phrases[state.currentQuestionIndex].trans,
                 isCorrect: answerIsCorrect,
             };
 
@@ -65,6 +66,16 @@ export const fillGapsReducer = (state, action) => {
             return {
                 ...state,
                 showTranslation: true,
+            };
+        }
+
+        case "RESTART": {
+            return {
+                ...state,
+                showResults: false,
+                userAnswers: [],
+                correctAnswersCounter: 0,
+                currentQuestionIndex: 0,
             };
         }
 
