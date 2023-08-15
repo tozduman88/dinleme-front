@@ -50,6 +50,7 @@ export const phrases = [
         trans: "Ты принесла то, что я просил?",
         level: "middle",
         url: "CQACAgIAAxkBAAOIZNe2jy_fPqow1zaXzuSKtQt4bLYAAtM0AAKJWcBK0MCyu6PiPT4wBA",
+        toReplace: ["istediklerimi"],
     },
 
     {
@@ -58,6 +59,7 @@ export const phrases = [
         trans: "Потому что я не сделал ничего, за что надо просить прощения.",
         level: "middle",
         url: "CQACAgIAAxkBAAOKZNe2qjNnHhTYOdDDTQHdGPRxBTgAAtY0AAKJWcBKC5VJGzM2GeEwBA",
+        toReplace: ["özür", "dilenecek"],
     },
 
     {
@@ -66,6 +68,7 @@ export const phrases = [
         trans: "Тебе хватает на жизнь зарплаты, которую ты получаешь?",
         level: "middle",
         url: "CQACAgIAAxkBAAOMZNe2266ctyHiu1tap415Dz8zWskAAtc0AAKJWcBKuPAad6Lcq5AwBA",
+        toReplace: ["aldığın", "geçinebiliyor"],
     },
 
     {
@@ -74,6 +77,7 @@ export const phrases = [
         trans: "Накрась губы красной помадой. Тебе очень идёт.",
         level: "middle",
         url: "CQACAgIAAxkBAAOOZNe3AVCoLb1-58nh7VN6jCy3QAEAAtw0AAKJWcBKh10Zl-VaE1QwBA",
+        toReplace: ["ruj", "sür"],
     },
 
     {
@@ -82,5 +86,6 @@ export const phrases = [
         trans: "В противном случае я не отвечаю за последствия.",
         level: "middle",
         url: "CQACAgIAAxkBAAOQZNe35rCj0B4cCIadMJ1MmcZxX2oAAuA0AAKJWcBK5HRwQqJZgIAwBA",
+        toReplace: ["takdirde", "olacaklardan"],
     },
 ];
