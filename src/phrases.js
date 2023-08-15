@@ -14,7 +14,7 @@ export const phrases = [
         trans: "Ты не обязана ничего объяснять.",
         level: "easy",
         url: "CQACAgIAAxkBAAOAZNe2FJx74JtrnWywWLROe90Dzj8AAsk0AAKJWcBKlHkCYgKY-dswBA",
-        toReplace: ["açıklama"],
+        toReplace: ["açıklama", "zorunda"],
     },
 
     {
