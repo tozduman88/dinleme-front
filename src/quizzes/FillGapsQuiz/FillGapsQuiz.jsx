@@ -116,6 +116,7 @@ export default function FillGapsQuiz({ phrases }) {
                 onKeyDown={onKeyDownHandler}
                 autoComplete="off"
                 autoCorrect="off"
+                autoCapitalize="off"
                 spellCheck="disabled"
             />
         ));
