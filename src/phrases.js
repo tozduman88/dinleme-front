@@ -5,6 +5,7 @@ export const phrases = [
         trans: "Ты всё ещё сердишься на меня?",
         level: "easy",
         url: "CQACAgIAAxkBAANAZNedaXmFUCSpoJ6NVhjSHmS7CLIAAts3AAKTJcFK0jtETFsWhpMwBA",
+        toReplace: ["kızgın", "bana"],
     },
 
     {
@@ -13,6 +14,7 @@ export const phrases = [
         trans: "Ты не обязана ничего объяснять.",
         level: "easy",
         url: "CQACAgIAAxkBAAOAZNe2FJx74JtrnWywWLROe90Dzj8AAsk0AAKJWcBKlHkCYgKY-dswBA",
+        toReplace: ["açıklama"],
     },
 
     {
@@ -21,6 +23,7 @@ export const phrases = [
         trans: "Я извлекла большой урок из этого случая.",
         level: "easy",
         url: "CQACAgIAAxkBAAOCZNe2Ot1a-iG4KVO5v2-38b9IzqgAAs40AAKJWcBKdL4-e61BdnQwBA",
+        toReplace: ["ders", "çıkardım", "olaydan"],
     },
 
     {
@@ -29,6 +32,7 @@ export const phrases = [
         trans: "Я жду вас в своей машине, профессор.",
         level: "easy",
         url: "CQACAgIAAxkBAAOEZNe2Vd9uzBRxc1flDL3UG9-KB2kAAtA0AAKJWcBK_V_cdw_No0cwBA",
+        toReplace: ["Sizi", "arabamda"],
     },
 
     {
@@ -37,6 +41,7 @@ export const phrases = [
         trans: "Да, мы очень близкие друзья.",
         level: "easy",
         url: "CQACAgIAAxkBAAOGZNe2cuqYcini6e09oOcog9hcepQAAtE0AAKJWcBKQ9ROIL_EexkwBA",
+        toReplace: ["yakın", "arkadaşız"],
     },
 
     {

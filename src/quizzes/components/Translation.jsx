@@ -19,5 +19,5 @@ export default Translation;
 Translation.propTypes = {
     text: PropTypes.string.isRequired,
     isShown: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
 };
