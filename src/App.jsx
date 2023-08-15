@@ -44,10 +44,14 @@ const router = createBrowserRouter(
 );
 
 const tg = window.Telegram.WebApp;
+const backButton = tg.backButton;
+
 function App() {
     useEffect(() => {
         tg.ready();
     }, []);
+
+    backButton.show();
 
     return <RouterProvider router={router} />;
 }
