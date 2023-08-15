@@ -17,7 +17,7 @@ export const fillGapsReducer = (state, action) => {
                     checkedInputs.push(false);
                 }
             }
-            console.log("checkedInputs ", checkedInputs);
+
             const answerIsCorrect = checkedInputs.every(
                 (item) => item === true
             );
