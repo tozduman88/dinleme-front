@@ -6,8 +6,7 @@ export const fillGapsReducer = (state, action) => {
             const currentInputValues = action.payload;
 
             let checkedInputs = [];
-            console.log("correctAnswers: ", correctAnswers);
-            console.log("currentInputs: ", currentInputValues);
+
             for (let i = 0; i < currentInputValues.length; i++) {
                 if (
                     correctAnswers[i].toLowerCase() ===
