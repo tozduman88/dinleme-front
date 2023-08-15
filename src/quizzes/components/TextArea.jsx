@@ -8,6 +8,7 @@ const TextArea = ({ onChange, answer, requiredMessage }) => {
                 autoCorrect="off"
                 autoCapitalize="off"
                 spellCheck="false"
+                maxLength ={92}
                 onChange={onChange}
                 value={answer}
             />

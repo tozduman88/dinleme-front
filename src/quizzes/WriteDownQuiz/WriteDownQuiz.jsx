@@ -15,6 +15,7 @@ export default function WriteDownQuiz({ phrases }) {
     const [state, dispatch] = useReducer(writeDownReducer, {
         phrases: phrases,
         currentQuestionIndex: 0,
+        showTranslation: false,
         isAnswered: false,
         showResults: false,
         correctAnswersCounter: 0,
@@ -45,6 +46,10 @@ export default function WriteDownQuiz({ phrases }) {
         setAnswer("");
     };
 
+    const showTrans = () => {
+        dispatch({ type: "SHOW_TRANSLATION" });
+    };
+
     return (
         <>
             {!state.showResults && (
@@ -58,7 +63,11 @@ export default function WriteDownQuiz({ phrases }) {
                         src={`/audio/${currentQuestion.id}.mp3`}
                         autoPlay={true}
                     />
-                    <Translation text={currentQuestion.trans} />
+                    <Translation
+                        text={currentQuestion.trans}
+                        isShown={state.showTranslation}
+                        onClick={showTrans}
+                    />
                     {state.isAnswered ? (
                         <>
                             {userAnswer.isCorrect ? (
@@ -67,7 +76,7 @@ export default function WriteDownQuiz({ phrases }) {
                                 <UserAnswer text={userAnswer.text} />
                             )}
 
-                            <CorrectAnswer phrase={currentQuestion.text} />
+                            <CorrectAnswer text={currentQuestion.text} />
                             <Button
                                 text="Далее"
                                 onClick={() => dispatch({ type: "NEXT" })}

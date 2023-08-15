@@ -54,6 +54,14 @@ export const writeDownReducer = (state, action) => {
                 currentQuestionIndex,
                 showResults,
                 isAnswered: false,
+                showTranslation: false,
+            };
+        }
+
+        case "SHOW_TRANSLATION": {
+            return {
+                ...state,
+                showTranslation: true,
             };
         }
 

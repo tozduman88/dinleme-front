@@ -10,7 +10,7 @@ export const phrases = [
     {
         id: 2,
         text: "Açıklama yapmak zorunda değilsin.",
-        trans: "Ты всё ещё сердишься на меня?",
+        trans: "Ты не обязана ничего объяснять.",
         level: "easy",
         url: "CQACAgIAAxkBAAOAZNe2FJx74JtrnWywWLROe90Dzj8AAsk0AAKJWcBKlHkCYgKY-dswBA",
     },
@@ -26,7 +26,7 @@ export const phrases = [
     {
         id: 4,
         text: "Sizi arabamda bekliyorum profesör.",
-        trans: "Я жду вас в своей машине, профессок.",
+        trans: "Я жду вас в своей машине, профессор.",
         level: "easy",
         url: "CQACAgIAAxkBAAOEZNe2Vd9uzBRxc1flDL3UG9-KB2kAAtA0AAKJWcBK_V_cdw_No0cwBA",
     },
@@ -66,7 +66,7 @@ export const phrases = [
     {
         id: 9,
         text: "Kırmızı ruj sür sana çok yakışır.",
-        trans: "Накрась губы красной помадоа. Тебе очень идёт.",
+        trans: "Накрась губы красной помадой. Тебе очень идёт.",
         level: "middle",
         url: "CQACAgIAAxkBAAOOZNe3AVCoLb1-58nh7VN6jCy3QAEAAtw0AAKJWcBKh10Zl-VaE1QwBA",
     },
