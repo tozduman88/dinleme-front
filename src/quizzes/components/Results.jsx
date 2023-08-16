@@ -4,6 +4,7 @@ import List from "./List";
 const Results = ({ numOfCorrect, length, userAnswers }) => {
     const wrongAnswers = userAnswers.filter((answer) => !answer.isCorrect);
     const correctAnswers = userAnswers.filter((answer) => answer.isCorrect);
+
     return (
         <>
             <div className="result-count">
@@ -12,11 +13,11 @@ const Results = ({ numOfCorrect, length, userAnswers }) => {
                 </h3>
             </div>
             {length - numOfCorrect > 0 && (
-                <div>
+                <>
                     <h4>Фразы, в которых вы ошиблись: </h4>
 
                     <List phrases={wrongAnswers} />
-                </div>
+                </>
             )}
             {numOfCorrect > 0 && (
                 <div>

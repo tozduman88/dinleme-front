@@ -73,7 +73,7 @@ export default function WriteDownQuiz({ phrases }) {
                             {userAnswer.isCorrect ? (
                                 "Верно!"
                             ) : (
-                                <UserAnswer text={userAnswer.text} />
+                                <UserAnswer text={userAnswer.userInput} />
                             )}
 
                             <CorrectAnswer text={currentQuestion.text} />
@@ -95,7 +95,20 @@ export default function WriteDownQuiz({ phrases }) {
                 </>
             )}
 
-            {state.showResults && <Results />}
+            {state.showResults && (
+                <>
+                    <Results
+                        numOfCorrect={state.correctAnswersCounter}
+                        length={state.phrases.length}
+                        userAnswers={state.userAnswers}
+                        type="gaps"
+                    />
+                    <Button
+                        text="Ещё один раунд"
+                        onClick={() => dispatch({ type: "RESTART" })}
+                    />
+                </>
+            )}
         </>
     );
 }

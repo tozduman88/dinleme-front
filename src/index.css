@@ -42,11 +42,23 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 600px;
     width: 90%;
     display: grid;
     place-items: center;
     gap: 10px;
+}
+
+.quiz {
+    background-color: var(--clr-white);
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    gap: 15px;
+    min-height: 80vh;
 }
 
 .container {
@@ -58,7 +70,6 @@ body {
     display: grid;
     place-items: center;
     gap: 15px;
-    height: 80vh;
 }
 
 button {

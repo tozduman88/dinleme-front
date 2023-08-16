@@ -1,0 +1,20 @@
+.list {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    place-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 2px solid gray;
+    font-size: 0.85rem;
+}
+
+.text {
+    text-align: center;
+}

@@ -177,6 +177,7 @@ export default function FillGapsQuiz({ phrases }) {
                         numOfCorrect={state.correctAnswersCounter}
                         length={state.phrases.length}
                         userAnswers={state.userAnswers}
+                        type="gaps"
                     />
                     <Button
                         text="Ещё один раунд"

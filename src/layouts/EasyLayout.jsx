@@ -5,7 +5,7 @@ export default function EasyLayout() {
     const phrases = data.filter((phrase) => phrase.level === "easy");
 
     return (
-        <div className="container">
+        <div className="quiz">
             <Outlet context={phrases} />
         </div>
     );

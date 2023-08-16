@@ -5,7 +5,7 @@ export default function MiddleLayout() {
     const phrases = data.filter((phrase) => phrase.level === "middle");
 
     return (
-        <div className="container">
+        <div className="quiz">
             <Outlet context={phrases} />
         </div>
     );
