@@ -46,8 +46,10 @@ const router = createBrowserRouter(
 const tg = window.Telegram.WebApp;
 
 function App() {
+    tg.MainButton.text = "Main Button";
     useEffect(() => {
         tg.ready();
+        tg.MainButton.show();
     }, []);
 
     const onClose = () => {
