@@ -51,7 +51,6 @@ function App() {
     useEffect(() => {
         tg.ready();
         tg.MainButton.show();
-        tg.BackButton.hide();
     }, []);
 
     return (
