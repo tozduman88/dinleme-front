@@ -14,7 +14,7 @@ export default function EasyWriteDown() {
         tg.BackButton.show();
     }, []);
 
-    tg.onEvent("backButtonClicked", () => navigate(-1));
+    tg.onEvent("backButtonClicked", () => navigate("/easy"));
 
     return (
         <>
