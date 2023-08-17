@@ -50,14 +50,11 @@ function App() {
     useEffect(() => {
         tg.ready();
         tg.MainButton.show();
+        tg.BackButton.show();
     }, []);
 
-    const onClose = () => {
-        tg.close();
-    };
     return (
         <>
-            <button onClick={onClose}>Close</button>
             <RouterProvider router={router} />;
         </>
     );
