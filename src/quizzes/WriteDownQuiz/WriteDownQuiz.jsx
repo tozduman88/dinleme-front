@@ -30,6 +30,10 @@ export default function WriteDownQuiz({ phrases }) {
     const [answer, setAnswer] = useState("");
     const [requiredMessage, setRequiredMessage] = useState(false);
 
+    tg.MainButton.show();
+
+    tg.MainButton.text = "Далее";
+
     const checkHandler = () => {
         if (
             answer.replace(/\s/g, "") == null ||
