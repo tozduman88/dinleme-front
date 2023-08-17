@@ -6,7 +6,6 @@ const tg = window.Telegram.WebApp;
 function Root() {
     const location = useLocation();
     const currentPath = location.pathname;
-    console.log(currentPath);
 
     if (currentPath === "/") {
         tg.BackButton.hide();
