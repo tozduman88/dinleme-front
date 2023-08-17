@@ -20,7 +20,9 @@ export const writeDownReducer = (state, action) => {
             ) {
                 answer = {
                     id: currentQuestion.id,
-                    correctText: state.phrases[state.currentQuestionIndex].text,
+                    userInput: currentInput,
+                    text: state.phrases[state.currentQuestionIndex].text,
+                    trans: state.phrases[state.currentQuestionIndex].trans,
                     isCorrect: true,
                 };
                 correctAnswersCounter = state.correctAnswersCounter + 1;

@@ -42,7 +42,7 @@ body {
 }
 
 .wrapper {
-    max-width: 600px;
+    max-width: 900px;
     width: 90%;
     display: grid;
     place-items: center;
@@ -53,7 +53,7 @@ body {
     background-color: var(--clr-white);
     padding: 20px;
     width: 100%;
-    max-width: 900px;
+    max-width: 600px;
     border-radius: 10px;
     display: grid;
     place-items: center;
