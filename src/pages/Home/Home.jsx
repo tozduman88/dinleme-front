@@ -2,7 +2,7 @@ import { MenuButton } from "../../components/MenuButton";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-    return (
+    return ( 
         <>
             <div className="container">
                 <h3>Уровень:</h3>
