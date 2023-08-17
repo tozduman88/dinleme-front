@@ -50,7 +50,15 @@ function App() {
         tg.ready();
     }, []);
 
-    return <RouterProvider router={router} />;
+    const onClose = () => {
+        tg.close();
+    };
+    return (
+        <>
+            <button onClick={onClose}>Close</button>
+            <RouterProvider router={router} />;
+        </>
+    );
 }
 
 export default App;
