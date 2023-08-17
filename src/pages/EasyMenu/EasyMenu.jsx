@@ -11,7 +11,7 @@ export default function EasyMenu() {
         tg.BackButton.show();
     }, []);
 
-    tg.onEvent("backButtonClicked", () => navigate(-1));
+    tg.onEvent("backButtonClicked", () => navigate("/"));
 
     return <QuizMenu />;
 }
