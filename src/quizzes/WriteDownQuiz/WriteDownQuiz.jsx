@@ -11,6 +11,8 @@ import Button from "~/components/Button";
 import UserAnswer from "~/quizzes/components/CorrectAnswer";
 import CorrectAnswer from "~/quizzes/components/CorrectAnswer";
 
+const tg = window.Telegram.WebApp;
+
 export default function WriteDownQuiz({ phrases }) {
     const [state, dispatch] = useReducer(writeDownReducer, {
         phrases: phrases,
@@ -77,10 +79,13 @@ export default function WriteDownQuiz({ phrases }) {
                             )}
 
                             <CorrectAnswer text={currentQuestion.text} />
-                            <Button
+                            {/* <Button
                                 text="Далее"
                                 onClick={() => dispatch({ type: "NEXT" })}
-                            />
+                            /> */}
+                            {tg.onEvent("backButtonClicked", () =>
+                                dispatch({ type: "NEXT" })
+                            )}
                         </>
                     ) : (
                         <>
