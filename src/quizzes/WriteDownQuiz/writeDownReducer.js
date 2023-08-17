@@ -69,6 +69,16 @@ export const writeDownReducer = (state, action) => {
             };
         }
 
+        case "RESTART": {
+            return {
+                ...state,
+                showResults: false,
+                userAnswers: [],
+                correctAnswersCounter: 0,
+                currentQuestionIndex: 0,
+            };
+        }
+
         default: {
             return state;
         }
