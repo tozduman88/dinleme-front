@@ -9,6 +9,7 @@ import CorrectAnswer from "~/quizzes/components/CorrectAnswer";
 import Translation from "~/quizzes/components/Translation";
 // import UserAnswer from "~/quizzes/components/UserAnswer";
 import Results from "~/quizzes/components/Results";
+import PopUp from "~/quizzes/components/PopUp";
 
 export default function FillGapsQuiz({ phrases }) {
     const [state, dispatch] = useReducer(fillGapsReducer, {
@@ -47,6 +48,13 @@ export default function FillGapsQuiz({ phrases }) {
         refs.current[0].focus();
     }, [currentQuestion]);
 
+    const setPopUp = () => {
+        setRequiredMessage(true);
+        setTimeout(() => {
+            setRequiredMessage(false);
+        }, 1000);
+    };
+
     const handleChange = (e) => {
         const { value, maxLength } = e.target;
 
@@ -67,7 +75,7 @@ export default function FillGapsQuiz({ phrases }) {
                 currentInputValues.current[i] == null ||
                 currentInputValues.current[i] === ""
             ) {
-                setRequiredMessage(true);
+                setPopUp();
                 return;
             }
         }
@@ -110,6 +118,11 @@ export default function FillGapsQuiz({ phrases }) {
                         ? "correct-answer"
                         : "wrong-answer"
                 }
+                style={{
+                    border: requiredMessage
+                        ? "1px solid red"
+                        : "1px solid gray",
+                }}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 disabled={isDisabled}
@@ -158,9 +171,10 @@ export default function FillGapsQuiz({ phrases }) {
                         <>
                             <p>{text}</p>
                             <div className={`${hideShow}`}>
-                                {requiredMessage && (
-                                    <p>Заполните все пробелы</p>
-                                )}
+                                <PopUp
+                                    isOpen={requiredMessage}
+                                    text="Заполните все пропуски"
+                                />
                                 <Button
                                     onClick={checkHandler}
                                     text="Проверить"
