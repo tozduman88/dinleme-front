@@ -88,7 +88,7 @@ export default function WriteDownQuiz({ phrases }) {
                                 onClick={() => dispatch({ type: "NEXT" })}
                             /> */}
                             {tg.onEvent("backButtonClicked", () =>
-                                dispatch({ type: "NEXT" })
+                                console.log("clicked")
                             )}
                         </>
                     ) : (
