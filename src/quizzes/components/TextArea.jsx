@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import PopUp from "./PopUp";
 
 const TextArea = ({ onChange, answer, requiredMessage }) => {
     return (
@@ -8,11 +9,16 @@ const TextArea = ({ onChange, answer, requiredMessage }) => {
                 autoCorrect="off"
                 autoCapitalize="off"
                 spellCheck="false"
-                maxLength ={92}
+                maxLength={92}
                 onChange={onChange}
                 value={answer}
+                style={{
+                    border: requiredMessage
+                        ? "2px solid red"
+                        : "2px solid gray",
+                }}
             />
-            {requiredMessage && <p>Напишите ответ.</p>}
+            <PopUp isOpen={requiredMessage} text="Напишите ваш ответ" />
         </>
     );
 };

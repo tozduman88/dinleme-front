@@ -1,0 +1,20 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner {
+    position: relative;
+    background: rgba(7, 111, 134, 0.85);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}

@@ -27,12 +27,19 @@ export default function WriteDownQuiz({ phrases }) {
     const [answer, setAnswer] = useState("");
     const [requiredMessage, setRequiredMessage] = useState(false);
 
+    const setPopUp = () => {
+        setRequiredMessage(true);
+        setTimeout(() => {
+            setRequiredMessage(false);
+        }, 1000);
+    };
+
     const checkHandler = () => {
         if (
             answer.replace(/\s/g, "") == null ||
             answer.replace(/\s/g, "") === ""
         ) {
-            setRequiredMessage(true);
+            setPopUp();
             return;
         }
 
