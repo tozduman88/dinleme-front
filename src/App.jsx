@@ -8,15 +8,15 @@ import {
 } from "react-router-dom";
 
 import Root from "~/layouts/Root";
-import EasyMenu from "~/pages/EasyMenu/EasyMenu";
-import MiddleMenu from "~/pages/MiddleMenu/MiddleMenu";
-import HardMenu from "~/pages/HardMenu/HardMenu";
-import EasyFillGaps from "~/pages/EasyMenu/EasyFillGaps";
-import EasyWriteDown from "~/pages/EasyMenu/EasyWriteDown";
-import MiddleFillGaps from "~/pages/MiddleMenu/MiddleFillGaps";
-import MiddleWriteDown from "~/pages/MiddleMenu/MiddleWriteDown";
-import HardWriteDown from "~/pages/HardMenu/HardWriteDown";
-import HardFillGaps from "~/pages/HardMenu/HardFillGaps";
+import EasyMenu from "~/pages/Easy/EasyMenu";
+import MiddleMenu from "~/pages/Middle/MiddleMenu";
+import HardMenu from "~/pages/Hard/HardMenu";
+import EasyFillGaps from "~/pages/Easy/EasyFillGaps";
+import EasyWriteDown from "~/pages/Easy/EasyWriteDown";
+import MiddleFillGaps from "~/pages/Middle/MiddleFillGaps";
+import MiddleWriteDown from "~/pages/Middle/MiddleWriteDown";
+import HardWriteDown from "~/pages/Hard/HardWriteDown";
+import HardFillGaps from "~/pages/Hard/HardFillGaps";
 import EasyLayout from "./layouts/EasyLayout";
 import MiddleLayout from "./layouts/MiddleLayout";
 

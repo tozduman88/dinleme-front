@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-// import Question from "~/quizzes/components/Question";
 import { writeDownReducer } from "./writeDownReducer";
 import { useReducer, useState } from "react";
 import Results from "~/quizzes/components/Results";
