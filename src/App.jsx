@@ -47,10 +47,10 @@ const tg = window.Telegram.WebApp;
 
 function App() {
     tg.MainButton.text = "Main Button";
+
     useEffect(() => {
         tg.ready();
         tg.MainButton.show();
-        tg.BackButton.show();
     }, []);
 
     return (
