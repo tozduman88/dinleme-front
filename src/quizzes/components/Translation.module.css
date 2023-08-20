@@ -1,6 +1,15 @@
 .link {
     text-decoration: underline;
     font-weight: 600;
-    color: rgba(4, 4, 150, 0.83);
+    color: rgb(13, 45, 189);
     cursor: pointer;
+    font-size: var(--ff-small);
+}
+
+.link:hover {
+    color: rgb(5, 31, 149);
+}
+
+.text {
+    font-size: var(--ff-small);
 }

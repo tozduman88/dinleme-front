@@ -5,7 +5,7 @@ const Translation = ({ text, isShown, onClick }) => {
     return (
         <>
             {isShown ? (
-                <p>{text}</p>
+                <p className={styles.text}>{text}</p>
             ) : (
                 <p className={styles.link} onClick={onClick}>
                     Посмотреть перевод
