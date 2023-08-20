@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import styles from "./UserAnswer.module.css";
 
 export default function UserAnswer({ text }) {
-    return <p>{text}</p>;
+    return <p className={styles.text}>{text}</p>;
 }
 
 UserAnswer.propTypes = {

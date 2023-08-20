@@ -7,7 +7,7 @@ import AudioPlayer from "~/components/AudioPlayer";
 import Translation from "~/quizzes/components/Translation";
 import TextArea from "~/quizzes/components/TextArea";
 import Button from "~/components/Button";
-import UserAnswer from "~/quizzes/components/CorrectAnswer";
+import UserAnswer from "~/quizzes/components/UserAnswer";
 import CorrectAnswer from "~/quizzes/components/CorrectAnswer";
 
 export default function WriteDownQuiz({ phrases }) {

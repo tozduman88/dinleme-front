@@ -1,0 +1,5 @@
+.text {
+    font-size: var(--ff-small);
+    color: red;
+    text-decoration: line-through;
+}
