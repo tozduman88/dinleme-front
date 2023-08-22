@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
+import { IoIosCheckmarkCircle } from "react-icons/io";
+import styles from "./CorrectAnswer.module.css";
 
 export default function CorrectAnswer({ text }) {
-    return <p>{text}</p>;
+    return (
+        <div className={styles.box}>
+            <IoIosCheckmarkCircle className={styles.icon} />
+            <p className="bold">{text}</p>
+        </div>
+    );
 }
 
 CorrectAnswer.propTypes = {

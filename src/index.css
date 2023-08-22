@@ -90,3 +90,8 @@ textarea {
     border: 2px solid gray;
     padding: 10px;
 }
+
+.bold {
+    font-weight: 600;
+    text-align: center;
+}
