@@ -13,7 +13,6 @@ function Root() {
     }
     return (
         <>
-            <p>{initData}</p>
             <div className="wrapper">
                 <Outlet context={phrases} />
             </div>
