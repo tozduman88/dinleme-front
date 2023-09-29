@@ -6,7 +6,7 @@ const tg = window.Telegram.WebApp;
 const Home = () => {
     return (
         <>
-            <p>Hi {tg.WebAppUser}!</p>
+            <p>Hi {tg.initDataUnsafe.user}!</p>
             <div className="container">
                 <h3>Уровень:</h3>
                 <Link to="easy">
