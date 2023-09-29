@@ -2,12 +2,11 @@ import { MenuButton } from "../../components/MenuButton";
 import { Link } from "react-router-dom";
 
 const tg = window.Telegram.WebApp;
-const initData = tg.initData;
 
 const Home = () => {
     return (
         <>
-            <p>Hi {initData.user}!</p>
+            <p>Hi {tg.WebAppUser.id}!</p>
             <div className="container">
                 <h3>Уровень:</h3>
                 <Link to="easy">
