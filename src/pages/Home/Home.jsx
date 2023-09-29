@@ -6,11 +6,7 @@ const tg = window.Telegram.WebApp;
 const Home = () => {
     return (
         <>
-            Hi{" "}
-            {tg.initDataUnsafe.map((object, i) => (
-                <p key={i}>{object}</p>
-            ))}
-            !
+            Hi {tg.initDataUnsafe.user.id}!
             <div className="container">
                 <h3>Уровень:</h3>
                 <Link to="easy">
