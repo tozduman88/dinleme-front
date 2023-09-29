@@ -7,7 +7,7 @@ const initData = tg.initData;
 function Root() {
     const location = useLocation();
     const currentPath = location.pathname;
-
+    console.log(initData);
     if (currentPath === "/") {
         tg.BackButton.hide();
     }
