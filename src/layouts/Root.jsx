@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { phrases } from "~/phrases";
 
 const tg = window.Telegram.WebApp;
-const initData = tg.initData;
+const initData = JSON.parse(tg.initData);
 
 function Root() {
     const location = useLocation();
