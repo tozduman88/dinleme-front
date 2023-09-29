@@ -8,7 +8,7 @@ const Home = () => {
         <>
             Hi{" "}
             {tg.initDataUnsafe.map((object, i) => (
-                <p key={i}>{object.content}</p>
+                <p key={i}>{object}</p>
             ))}
             !
             <div className="container">
