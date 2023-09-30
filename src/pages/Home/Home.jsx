@@ -7,17 +7,12 @@ const Home = () => {
     console.log("length", tg.initDataUnsafe.length);
     return (
         <>
-            {/* {tg.initDataUnsafe.length != undefined ? (
+            {tg.initDataUnsafe.length != undefined ? (
                 <Link to={tg.initDataUnsafe.user.id}>Мой профиль</Link>
             ) : (
                 <p>Hi user!</p>
-            )} */}
-
-            {tg.initDataUnsafe.length && (
-                <Link to={tg.initDataUnsafe.user.id}>Мой профиль</Link>
             )}
 
-            {!tg.initDataUnsafe.length && <p>Hi user</p>}
             <div className="container">
                 <h3>Уровень:</h3>
                 <Link to="easy">
