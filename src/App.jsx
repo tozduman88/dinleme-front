@@ -19,6 +19,7 @@ import HardWriteDown from "~/pages/Hard/HardWriteDown";
 import HardFillGaps from "~/pages/Hard/HardFillGaps";
 import EasyLayout from "./layouts/EasyLayout";
 import MiddleLayout from "./layouts/MiddleLayout";
+import Profile from "./pages/Profile/Profile";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -39,6 +40,8 @@ const router = createBrowserRouter(
                 <Route path="write-down" element={<HardWriteDown />} />
                 <Route path="fill-gaps" element={<HardFillGaps />} />
             </Route>
+
+            <Route path="profile/:id" element={<Profile />} />
         </Route>
     )
 );

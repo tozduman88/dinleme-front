@@ -4,17 +4,13 @@ import { Link } from "react-router-dom";
 const tg = window.Telegram.WebApp;
 
 const Home = () => {
-    console.log(Object.keys(tg.initDataUnsafe).length);
     const length = Object.keys(tg.initDataUnsafe).length;
     return (
         <>
-            {/* {tg.initDataUnsafe.length != undefined ? (
-                <Link to={tg.initDataUnsafe.user.id}>Мой профиль</Link>
-            ) : (
-                <p>Hi user!</p>
-            )} */}
             {length > 0 ? (
-                <Link to={tg.initDataUnsafe.user.id}>Мой профиль</Link>
+                <Link to={`profile/${tg.initDataUnsafe.user.id}`}>
+                    Мой профиль
+                </Link>
             ) : (
                 <p>Hi user</p>
             )}
