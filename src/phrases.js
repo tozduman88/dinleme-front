@@ -4,7 +4,7 @@ export const phrases = [
         text: "Hala kızgın mısın bana?",
         trans: "Ты всё ещё сердишься на меня?",
         level: "easy",
-        url: "CQACAgIAAxkBAANAZNedaXmFUCSpoJ6NVhjSHmS7CLIAAts3AAKTJcFK0jtETFsWhpMwBA",
+        url: null,
         toReplace: ["kızgın", "bana"],
     },
 
@@ -13,7 +13,7 @@ export const phrases = [
         text: "Açıklama yapmak zorunda değilsin.",
         trans: "Ты не обязана ничего объяснять.",
         level: "easy",
-        url: "CQACAgIAAxkBAAOAZNe2FJx74JtrnWywWLROe90Dzj8AAsk0AAKJWcBKlHkCYgKY-dswBA",
+        url: null,
         toReplace: ["açıklama", "zorunda"],
     },
 
@@ -22,7 +22,7 @@ export const phrases = [
         text: "Ben çok büyük bir ders çıkardım bu olaydan.",
         trans: "Я извлекла большой урок из этого случая.",
         level: "easy",
-        url: "CQACAgIAAxkBAAOCZNe2Ot1a-iG4KVO5v2-38b9IzqgAAs40AAKJWcBKdL4-e61BdnQwBA",
+        url: null,
         toReplace: ["ders", "çıkardım", "olaydan"],
     },
 
@@ -31,7 +31,7 @@ export const phrases = [
         text: "Sizi arabamda bekliyorum profesör.",
         trans: "Я жду вас в своей машине, профессор.",
         level: "easy",
-        url: "CQACAgIAAxkBAAOEZNe2Vd9uzBRxc1flDL3UG9-KB2kAAtA0AAKJWcBK_V_cdw_No0cwBA",
+        url: null,
         toReplace: ["Sizi", "arabamda"],
     },
 
@@ -40,7 +40,7 @@ export const phrases = [
         text: "Evet, biz çok yakın arkadaşız.",
         trans: "Да, мы очень близкие друзья.",
         level: "easy",
-        url: "CQACAgIAAxkBAAOGZNe2cuqYcini6e09oOcog9hcepQAAtE0AAKJWcBKQ9ROIL_EexkwBA",
+        url: null,
         toReplace: ["yakın", "arkadaşız"],
     },
 
@@ -49,7 +49,7 @@ export const phrases = [
         text: "Getirdin mi istediklerimi?",
         trans: "Ты принесла то, что я просил?",
         level: "middle",
-        url: "CQACAgIAAxkBAAOIZNe2jy_fPqow1zaXzuSKtQt4bLYAAtM0AAKJWcBK0MCyu6PiPT4wBA",
+        url: null,
         toReplace: ["istediklerimi"],
     },
 
@@ -58,7 +58,7 @@ export const phrases = [
         text: "Çünkü özür dilenecek bir şey yapmadım ki.",
         trans: "Потому что я не сделал ничего, за что надо просить прощения.",
         level: "middle",
-        url: "CQACAgIAAxkBAAOKZNe2qjNnHhTYOdDDTQHdGPRxBTgAAtY0AAKJWcBKC5VJGzM2GeEwBA",
+        url: null,
         toReplace: ["özür", "dilenecek"],
     },
 
@@ -67,7 +67,7 @@ export const phrases = [
         text: "Aldığın maaşla geçinebiliyor musun?",
         trans: "Тебе хватает на жизнь зарплаты, которую ты получаешь?",
         level: "middle",
-        url: "CQACAgIAAxkBAAOMZNe2266ctyHiu1tap415Dz8zWskAAtc0AAKJWcBKuPAad6Lcq5AwBA",
+        url: null,
         toReplace: ["aldığın", "geçinebiliyor"],
     },
 
@@ -76,7 +76,7 @@ export const phrases = [
         text: "Kırmızı ruj sür sana çok yakışır.",
         trans: "Накрась губы красной помадой. Тебе очень идёт.",
         level: "middle",
-        url: "CQACAgIAAxkBAAOOZNe3AVCoLb1-58nh7VN6jCy3QAEAAtw0AAKJWcBKh10Zl-VaE1QwBA",
+        url: null,
         toReplace: ["ruj", "sür"],
     },
 
@@ -85,7 +85,7 @@ export const phrases = [
         text: "Aksi takdirde olacaklardan sorumlu değilim.",
         trans: "В противном случае я не отвечаю за последствия.",
         level: "middle",
-        url: "CQACAgIAAxkBAAOQZNe35rCj0B4cCIadMJ1MmcZxX2oAAuA0AAKJWcBK5HRwQqJZgIAwBA",
+        url: null,
         toReplace: ["takdirde", "olacaklardan"],
     },
 ];

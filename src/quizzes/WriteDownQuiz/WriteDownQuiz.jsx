@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import PropTypes from "prop-types";
 import { writeDownReducer } from "./writeDownReducer";
 import { useReducer, useState } from "react";
@@ -87,6 +88,8 @@ export default function WriteDownQuiz({ phrases }) {
                                 text="Далее"
                                 onClick={() => dispatch({ type: "NEXT" })}
                             />
+
+                            <button>Добавить в "Мои фразы"</button>
                         </>
                     ) : (
                         <>
