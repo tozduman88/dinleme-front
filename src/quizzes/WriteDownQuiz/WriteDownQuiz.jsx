@@ -102,9 +102,7 @@ export default function WriteDownQuiz({ phrases }) {
                                 onClick={() => dispatch({ type: "NEXT" })}
                             />
 
-                            <button onClick={add}>
-                                Добавить в "Мои фразы"
-                            </button>
+                            <Button onClick={add} text="В мои фразы" />
                         </>
                     ) : (
                         <>
