@@ -1,5 +1,5 @@
 export async function addMyPhrase(data) {
-    const url = `https://localhost:3333/api/v1/users/${data.chat_id}`;
+    const url = `http://localhost:3333/api/v1/users/${data.chat_id}`;
 
     const response = await fetch(url, {
         method: "PUT",
