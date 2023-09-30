@@ -7,7 +7,7 @@ const Home = () => {
     console.log("length", tg.initDataUnsafe.valueOf.length);
     return (
         <>
-            {tg.initDataUnsafe.valueOf.length > 0 ? (
+            {tg.initDataUnsafe != null ? (
                 <Link to={tg.initDataUnsafe.user.id}>Мой профиль</Link>
             ) : (
                 <p>Hi user!</p>
