@@ -10,6 +10,9 @@ import TextArea from "~/quizzes/components/TextArea";
 import Button from "~/components/Button";
 import UserAnswer from "~/quizzes/components/UserAnswer";
 import CorrectAnswer from "~/quizzes/components/CorrectAnswer";
+import { addMyPhrase } from "~/utils/api";
+
+const tg = window.Telegram.WebApp;
 
 export default function WriteDownQuiz({ phrases }) {
     const [state, dispatch] = useReducer(writeDownReducer, {
@@ -57,6 +60,16 @@ export default function WriteDownQuiz({ phrases }) {
         dispatch({ type: "SHOW_TRANSLATION" });
     };
 
+    const add = async () => {
+        const data = {
+            phrase_id: currentQuestion.id,
+            chat_id: tg.initDataUnsafe.user.id,
+        };
+
+        console.log(data);
+        await addMyPhrase(data);
+    };
+
     return (
         <>
             {!state.showResults && (
@@ -89,7 +102,9 @@ export default function WriteDownQuiz({ phrases }) {
                                 onClick={() => dispatch({ type: "NEXT" })}
                             />
 
-                            <button>Добавить в "Мои фразы"</button>
+                            <button onClick={add}>
+                                Добавить в "Мои фразы"
+                            </button>
                         </>
                     ) : (
                         <>

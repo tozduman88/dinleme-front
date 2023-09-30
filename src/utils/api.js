@@ -1,9 +1,9 @@
-export async function addMyPhrase(values) {
-    const url = `http://localhost:3333/api/v1/users/${values.slug}`;
+export async function addMyPhrase(data) {
+    const url = `http://localhost:3333/api/v1/users/${data.chat_id}`;
 
     const response = await fetch(url, {
         method: "PUT",
-        body: JSON.stringify(values),
+        body: JSON.stringify(data),
         headers: {
             "Content-Type": "application/json",
         },
