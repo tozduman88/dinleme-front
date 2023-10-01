@@ -2,13 +2,16 @@ import { MenuButton } from "../../components/MenuButton";
 import { Link } from "react-router-dom";
 
 const tg = window.Telegram.WebApp;
+const hash = window.location.hash.slice(1);
+console.log("hash", hash);
+const params = new URLSearchParams(hash);
+const initData = new URLSearchParams(params.get("tgWebAppData"));
 
 const Home = () => {
-    const hash = window.location.hash.slice(1);
-    console.log(hash);
     const length = Object.keys(tg.initDataUnsafe).length;
     return (
         <>
+            <p>{initData}</p>
             {length > 0 ? (
                 <Link to={`profile/${tg.initDataUnsafe.user.id}`}>
                     Мой профиль
