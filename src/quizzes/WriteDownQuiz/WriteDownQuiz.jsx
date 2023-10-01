@@ -63,7 +63,7 @@ export default function WriteDownQuiz({ phrases }) {
     const add = async () => {
         const data = {
             phrase_id: currentQuestion.id,
-            chat_id: "861668804",
+            chat_id: tg.initDataUnsafe.user.id,
         };
 
         console.log(data);
