@@ -12,7 +12,7 @@ const Home = () => {
     const length = Object.keys(tg.initDataUnsafe).length;
     return (
         <>
-            <p>{user}</p>
+            <p>{user.id}</p>
             {length > 0 ? (
                 <Link to={`profile/${tg.initDataUnsafe.user.id}`}>
                     Мой профиль
