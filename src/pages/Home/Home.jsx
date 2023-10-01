@@ -14,9 +14,7 @@ const Home = () => {
         <>
             <p>{user.id}</p>
             {length > 0 ? (
-                <Link to={`profile/${tg.initDataUnsafe.user.id}`}>
-                    Мой профиль
-                </Link>
+                <Link to={`profile/${user.id}`}>Мой профиль</Link>
             ) : (
                 <p>Hi user</p>
             )}
