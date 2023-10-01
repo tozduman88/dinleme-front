@@ -6,7 +6,7 @@ const tg = window.Telegram.WebApp;
 const params = new URLSearchParams(window.location.hash.slice(1));
 const initDataString = params.get("tgWebAppData");
 const initData = new URLSearchParams(initDataString);
-const user = initData.get("user");
+const user = JSON.parse(initData.get("user"));
 
 const Home = () => {
     const length = Object.keys(tg.initDataUnsafe).length;
