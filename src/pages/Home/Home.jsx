@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 const tg = window.Telegram.WebApp;
 
 const Home = () => {
+    const hash = window.location.hash.slice(1);
+    console.log(hash);
     const length = Object.keys(tg.initDataUnsafe).length;
     return (
         <>
