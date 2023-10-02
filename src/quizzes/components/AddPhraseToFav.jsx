@@ -1,11 +1,12 @@
 import { addMyPhrase } from "~/utils/api";
 import WebApp from "@twa-dev/sdk";
-import { initData } from "@twa.js/init-data";
+// import { initData } from "@twa.js/init-data";
+import { retrieveLaunchParams } from "@tma.js/sdk";
 
 const initDataString = WebApp.initData;
-const myData = initData(initDataString);
 
 export default function AddPhraseToFav() {
+    const params = retrieveLaunchParams();
     const add = async ({ phraseId }) => {
         const data = {
             phrase_id: phraseId,
@@ -16,7 +17,7 @@ export default function AddPhraseToFav() {
     };
     return (
         <>
-            {myData}
+            {params}
             <button onClick={add}>Добавить в "Мои фразы"</button>
         </>
     );
