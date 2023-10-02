@@ -1,24 +1,21 @@
 import { addMyPhrase } from "~/utils/api";
 import WebApp from "@twa-dev/sdk";
-// import { retrieveLaunchParams } from "@tma.js/sdk";
-// import { initData } from "@tma.js/init-data";
 
 const initDataString = WebApp.initData;
 const initData = new URLSearchParams(initDataString);
 const user = JSON.parse(initData.get("user"));
 
-export default function AddPhraseToFav() {
-    const add = async ({ phraseId }) => {
+export default function AddPhraseToFav({ phraseId }) {
+    const add = async () => {
         const data = {
             phrase_id: phraseId,
+            user_id: user.id,
         };
 
-        return;
         await addMyPhrase(data);
     };
     return (
         <>
-            {user.id}
             <button onClick={add}>Добавить в "Мои фразы"</button>
         </>
     );
