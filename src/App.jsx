@@ -47,7 +47,7 @@ const router = createBrowserRouter(
     )
 );
 
-// const tg = window.Telegram.WebApp;
+// const tg = window.WebApp;
 
 function App() {
     useEffect(() => {
