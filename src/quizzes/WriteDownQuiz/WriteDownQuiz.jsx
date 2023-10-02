@@ -11,7 +11,7 @@ import Button from "~/components/Button";
 import UserAnswer from "~/quizzes/components/UserAnswer";
 import CorrectAnswer from "~/quizzes/components/CorrectAnswer";
 import { addMyPhrase } from "~/utils/api";
-import AddPhraseToFav from "../components/AddPhrasetoFav";
+import AddPhraseToFav from "~/quizzes/components/AddPhraseToFav";
 
 const tg = window.Telegram.WebApp;
 
