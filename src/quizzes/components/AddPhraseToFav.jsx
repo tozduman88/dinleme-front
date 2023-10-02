@@ -1,6 +1,6 @@
 import { addMyPhrase } from "~/utils/api";
 import WebApp from "@twa-dev/sdk";
-import { initData } from "@tma.js/init-data";
+import { initData } from "@twa.js/init-data";
 
 const initDataString = WebApp.initData;
 const myData = initData(initDataString);
