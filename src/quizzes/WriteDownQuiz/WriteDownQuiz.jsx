@@ -11,6 +11,7 @@ import Button from "~/components/Button";
 import UserAnswer from "~/quizzes/components/UserAnswer";
 import CorrectAnswer from "~/quizzes/components/CorrectAnswer";
 import { addMyPhrase } from "~/utils/api";
+import AddPhraseToFav from "../components/AddPhrasetoFav";
 
 const tg = window.Telegram.WebApp;
 
@@ -102,7 +103,7 @@ export default function WriteDownQuiz({ phrases }) {
                                 onClick={() => dispatch({ type: "NEXT" })}
                             />
 
-                            <Button onClick={add} text="В мои фразы" />
+                            <AddPhraseToFav phraseId={currentQuestion.id} />
                         </>
                     ) : (
                         <>
