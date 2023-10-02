@@ -13,3 +13,20 @@ export async function addMyPhrase(data) {
         throw { message: "Could not add phrase to My Phrases.", status: 500 };
     }
 }
+
+export async function checkOraddUser(data) {
+    const url = `https://b60a-193-104-145-23.ngrok-free.app/api/v1/users`;
+
+    const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `twa-init-data ${data.initData}`,
+        },
+    });
+
+    if (!response.ok) {
+        throw { message: "Could not add phrase to My Phrases.", status: 500 };
+    }
+}

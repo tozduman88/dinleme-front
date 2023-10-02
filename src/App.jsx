@@ -1,4 +1,5 @@
 import WebApp from "@twa-dev/sdk";
+import { checkOraddUser } from "~/utils/api";
 import { useEffect } from "react";
 import Home from "~/pages/Home/Home";
 import {
@@ -60,6 +61,10 @@ function App() {
     useEffect(() => {
         WebApp.ready();
     }, []);
+
+    useEffect(() => {
+        checkOraddUser({ initData: initData });
+    }, [initData]);
 
     return (
         <>

@@ -11,7 +11,6 @@ const Home = () => {
     const length = Object.keys(WebApp.initDataUnsafe).length;
     return (
         <>
-            <p>{user.id}</p>
             {length > 0 ? (
                 <Link to={`profile/${user.id}`}>Мой профиль</Link>
             ) : (
