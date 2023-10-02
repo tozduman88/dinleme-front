@@ -1,3 +1,4 @@
+import WebApp from "@twa-dev/sdk";
 import { useEffect } from "react";
 import Home from "~/pages/Home/Home";
 import {
@@ -46,11 +47,11 @@ const router = createBrowserRouter(
     )
 );
 
-const tg = window.Telegram.WebApp;
+// const tg = window.Telegram.WebApp;
 
 function App() {
     useEffect(() => {
-        tg.ready();
+        WebApp.ready();
     }, []);
 
     return (
