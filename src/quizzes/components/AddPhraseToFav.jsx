@@ -4,7 +4,7 @@ import { retrieveLaunchParams } from "@tma.js/sdk";
 import { initData } from "@tma.js/init-data";
 
 const initDataString = WebApp.initData;
-const myData = initData(initDataString);
+const myData = initData(new URLSearchParams(initDataString));
 
 export default function AddPhraseToFav() {
     const add = async ({ phraseId }) => {
