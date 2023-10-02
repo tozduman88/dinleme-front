@@ -10,7 +10,7 @@ export default function AddPhraseToFav() {
             phrase_id: phraseId,
         };
 
-        return console.log(initData(initDataString));
+        return console.log("initData", initData(initDataString));
         await addMyPhrase(data);
     };
     return (

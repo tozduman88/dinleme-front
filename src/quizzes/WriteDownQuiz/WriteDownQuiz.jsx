@@ -61,15 +61,15 @@ export default function WriteDownQuiz({ phrases }) {
         dispatch({ type: "SHOW_TRANSLATION" });
     };
 
-    const add = async () => {
-        const data = {
-            phrase_id: currentQuestion.id,
-            chat_id: tg.initDataUnsafe.user.id,
-        };
+    // const add = async () => {
+    //     const data = {
+    //         phrase_id: currentQuestion.id,
+    //         chat_id: tg.initDataUnsafe.user.id,
+    //     };
 
-        console.log(data);
-        await addMyPhrase(data);
-    };
+    //     console.log(data);
+    //     await addMyPhrase(data);
+    // };
 
     return (
         <>
