@@ -51,10 +51,9 @@ const router = createBrowserRouter(
 // const tg = window.WebApp;
 
 function App() {
-    const initData = new URLSearchParams(
-        window.location.hash.slice(1)
-    ).get("tgWebAppData");
-
+    const initData = new URLSearchParams(window.location.hash.slice(1)).get(
+        "tgWebAppData"
+    );
 
     // if (initData === null) {
     //     throw new Error("Ooof! Something is wrong. Init data is missing");
@@ -64,7 +63,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-        checkOraddUser(initData);
+        checkOraddUser({ initData: initData });
     }, [initData]);
 
     return (

@@ -14,15 +14,15 @@ export async function addMyPhrase(data) {
     }
 }
 
-export async function checkOraddUser(initData) {
+export async function checkOraddUser(data) {
     const url = `https://b60a-193-104-145-23.ngrok-free.app/api/v1/users`;
 
     const response = await fetch(url, {
         method: "POST",
-        body: JSON.stringify(initData),
+        body: JSON.stringify(data),
         headers: {
             "Content-Type": "application/json",
-            Authorization: `twa-init-data ${initData}`,
+            Authorization: `twa-init-data ${data.initData}`,
         },
     });
 
