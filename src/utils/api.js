@@ -1,5 +1,5 @@
 export async function addMyPhrase(data) {
-    const url = ` https://57ca-193-104-145-15.ngrok-free.app/api/v1/users/${data.chat_id}`;
+    const url = `https://b60a-193-104-145-23.ngrok-free.app/api/v1/users/${data.chat_id}`;
 
     const response = await fetch(url, {
         method: "PUT",
