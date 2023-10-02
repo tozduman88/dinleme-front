@@ -1,6 +1,5 @@
 import { addMyPhrase } from "~/utils/api";
 import WebApp from "@twa-dev/sdk";
-// import { initData } from "@twa.js/init-data";
 import { retrieveLaunchParams } from "@tma.js/sdk";
 
 const initDataString = WebApp.initData;
@@ -17,7 +16,7 @@ export default function AddPhraseToFav() {
     };
     return (
         <>
-            {params}
+            {initDataString}
             <button onClick={add}>Добавить в "Мои фразы"</button>
         </>
     );
