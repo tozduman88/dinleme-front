@@ -27,6 +27,6 @@ export async function checkOraddUser(data) {
     });
 
     if (!response.ok) {
-        throw { message: "Could not add phrase to My Phrases.", status: 500 };
+        throw { message: "Could not check user", status: 500 };
     }
 }
