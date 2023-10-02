@@ -5,7 +5,6 @@ import { retrieveLaunchParams } from "@tma.js/sdk";
 const initDataString = WebApp.initData;
 
 export default function AddPhraseToFav() {
-    const params = retrieveLaunchParams();
     const add = async ({ phraseId }) => {
         const data = {
             phrase_id: phraseId,
