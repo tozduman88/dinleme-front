@@ -1,7 +1,6 @@
 import { MenuButton } from "../../components/MenuButton";
 import { Link } from "react-router-dom";
-
-const tg = window.Telegram.WebApp;
+import WebApp from "@twa-dev/sdk";
 
 const params = new URLSearchParams(window.location.hash.slice(1));
 const initDataString = params.get("tgWebAppData");
@@ -9,7 +8,7 @@ const initData = new URLSearchParams(initDataString);
 const user = JSON.parse(initData.get("user"));
 
 const Home = () => {
-    const length = Object.keys(tg.initDataUnsafe).length;
+    const length = Object.keys(WebApp.initDataUnsafe).length;
     return (
         <>
             <p>{user.id}</p>
