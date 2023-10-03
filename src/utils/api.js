@@ -15,7 +15,7 @@ export async function addMyPhrase(data) {
 }
 
 export async function checkOraddUser(data) {
-    const url = `http://localhost:3333/api/v1/users`;
+    const url = `https://e1c6-193-104-145-23.ngrok-free.app/api/v1/users`;
 
     const response = await fetch(url, {
         method: "POST",
@@ -46,7 +46,11 @@ export async function getCurrentUser(chatId) {
 
 export async function getPhrases() {
     const url = `https://e1c6-193-104-145-23.ngrok-free.app/api/v1/phrases`
-    const response = await fetch(url);
+    const response = await fetch(url, {
+        headers: {
+            "ngrok-skip-browser-warning": "true",
+        }
+    });
     if (!response.ok) {
         throw { message: "Failed to fetch phrases", status: 500 };
     }
