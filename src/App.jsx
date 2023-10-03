@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 
 import Root from "~/layouts/Root";
+import { loader } from "~/layouts/Root"
 import EasyMenu from "~/pages/Easy/EasyMenu";
 import MiddleMenu from "~/pages/Middle/MiddleMenu";
 import HardMenu from "~/pages/Hard/HardMenu";
@@ -25,7 +26,7 @@ import Profile from "./pages/Profile/Profile";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<Root />}>
+        <Route path="/" element={<Root />} loader={loader}>
             <Route path="/" index element={<Home />} />
             <Route path="easy" element={<EasyLayout />}>
                 <Route index={true} element={<EasyMenu />} />

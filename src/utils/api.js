@@ -31,9 +31,9 @@ export async function checkOraddUser(data) {
     }
 }
 
-export async function getCurrentUser(slug) {
+export async function getCurrentUser(chatId) {
     const response = await fetch(
-        `https://e790-193-104-145-23.ngrok-free.app/api/v1/users/${slug}`
+        `https://e790-193-104-145-23.ngrok-free.app/api/v1/users/${chatId}`
     );
     if (!response.ok) {
         throw { message: "Failed to find current user", status: 500 };
