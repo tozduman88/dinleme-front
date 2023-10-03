@@ -1,5 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import { addMyPhrase } from "~/utils/api";
 import WebApp from "@twa-dev/sdk";
+import PropTypes from "prop-types";
 
 const initDataString = WebApp.initData;
 const initData = new URLSearchParams(initDataString);
@@ -20,3 +22,6 @@ export default function AddPhraseToFav({ phraseId }) {
         </>
     );
 }
+AddPhraseToFav.propTypes = {
+    phraseId: PropTypes.number.isRequired,
+};

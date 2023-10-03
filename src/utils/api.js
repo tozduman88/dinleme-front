@@ -1,5 +1,5 @@
 export async function addMyPhrase(data) {
-    const url = `https://b60a-193-104-145-23.ngrok-free.app/api/v1/users/${data.user_id}`;
+    const url = `https://e790-193-104-145-23.ngrok-free.app/api/v1/users/${data.user_id}`;
 
     const response = await fetch(url, {
         method: "PUT",
@@ -15,7 +15,7 @@ export async function addMyPhrase(data) {
 }
 
 export async function checkOraddUser(data) {
-    const url = `https://b60a-193-104-145-23.ngrok-free.app/api/v1/users`;
+    const url = `https://e790-193-104-145-23.ngrok-free.app/api/v1/users`;
 
     const response = await fetch(url, {
         method: "POST",
@@ -29,4 +29,15 @@ export async function checkOraddUser(data) {
     if (!response.ok) {
         throw { message: "Could not check user", status: 500 };
     }
+}
+
+export async function getCurrentUser(slug) {
+    const response = await fetch(
+        `https://e790-193-104-145-23.ngrok-free.app/api/v1/users/${slug}`
+    );
+    if (!response.ok) {
+        throw { message: "Failed to find current user", status: 500 };
+    }
+
+    return response.json();
 }

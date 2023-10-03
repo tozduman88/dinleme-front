@@ -56,7 +56,7 @@ function App() {
     );
 
     // if (initData === null) {
-    //     throw new Error("Ooof! Something is wrong. Init data is missing");
+    //     throw new Error("Init data is missing");
     // }
     useEffect(() => {
         WebApp.ready();

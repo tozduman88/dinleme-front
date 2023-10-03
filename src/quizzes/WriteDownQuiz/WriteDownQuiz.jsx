@@ -12,8 +12,6 @@ import UserAnswer from "~/quizzes/components/UserAnswer";
 import CorrectAnswer from "~/quizzes/components/CorrectAnswer";
 import AddPhraseToFav from "~/quizzes/components/AddPhraseToFav";
 
-const tg = window.Telegram.WebApp;
-
 export default function WriteDownQuiz({ phrases }) {
     const [state, dispatch] = useReducer(writeDownReducer, {
         phrases: phrases,
@@ -59,16 +57,6 @@ export default function WriteDownQuiz({ phrases }) {
     const showTrans = () => {
         dispatch({ type: "SHOW_TRANSLATION" });
     };
-
-    // const add = async () => {
-    //     const data = {
-    //         phrase_id: currentQuestion.id,
-    //         chat_id: tg.initDataUnsafe.user.id,
-    //     };
-
-    //     console.log(data);
-    //     await addMyPhrase(data);
-    // };
 
     return (
         <>
