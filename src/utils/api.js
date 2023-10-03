@@ -45,7 +45,7 @@ export async function getCurrentUser(chatId) {
 
 
 export async function getPhrases() {
-    const url = `http://localhost:3333/api/v1/phrases`
+    const url = `https://e1c6-193-104-145-23.ngrok-free.app/api/v1/phrases`
     const response = await fetch(url);
     if (!response.ok) {
         throw { message: "Failed to fetch phrases", status: 500 };

@@ -10,7 +10,6 @@ import {
 } from "react-router-dom";
 
 import Root from "~/layouts/Root";
-
 import EasyMenu from "~/pages/Easy/EasyMenu";
 import MiddleMenu from "~/pages/Middle/MiddleMenu";
 import HardMenu from "~/pages/Hard/HardMenu";
