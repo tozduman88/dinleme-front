@@ -1,17 +1,12 @@
-import { Outlet, useLocation, useLoaderData } from "react-router-dom";
-import { phrases as phrasesData } from "~/phrases";
-import { getCurrentUser } from "~/utils/api"
-import { BsFileRuled } from "react-icons/bs";
-
+import { Outlet, useLocation } from "react-router-dom";
 
 const tg = window.Telegram.WebApp;
-const params = new URLSearchParams(window.location.hash.slice(1));
-const initDataString = params.get("tgWebAppData");
-const initData = new URLSearchParams(initDataString);
-const user = JSON.parse(initData.get("user"));
+// const params = new URLSearchParams(window.location.hash.slice(1));
+// const initDataString = params.get("tgWebAppData");
+// const initData = new URLSearchParams(initDataString);
+// const user = JSON.parse(initData.get("user"));
 
 function Root() {
-    const data = useLoaderData()
     const location = useLocation();
     const currentPath = location.pathname;
 
@@ -21,7 +16,7 @@ function Root() {
     return (
         <>
             <div className="wrapper">
-                <Outlet context={data} />
+                <Outlet />
             </div>
         </>
     );
@@ -29,8 +24,4 @@ function Root() {
 
 export default Root;
 
-export function loader() {
-    const currentUser = getCurrentUser(user.id)
-    const phrases = phrasesData
-    return { phrases: phrases, currentUser: currentUser }
-}
+

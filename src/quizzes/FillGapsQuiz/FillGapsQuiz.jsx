@@ -26,7 +26,9 @@ export default function FillGapsQuiz({ phrases }) {
 
     const [requiredMessage, setRequiredMessage] = useState(false);
     const currentQuestion = state.phrases[state.currentQuestionIndex];
-    const toReplace = currentQuestion.toReplace;
+    const toReplace = currentQuestion.to_replace.split(" ").join('').split(",");
+    // чтобы убрать пробел перед вторым словом "kızgın, bana". Влияет на длину инпута
+
     let text = currentQuestion.text;
     const isDisabled = state.isDisabled;
     const hideShow = state.isAnswered ? "hidden" : "";
@@ -82,7 +84,7 @@ export default function FillGapsQuiz({ phrases }) {
         if (requiredMessage) {
             setRequiredMessage(false);
         }
-
+        console.log("currentInput", currentInputValues.current)
         dispatch({ type: "CHECK", payload: currentInputValues.current });
     };
 
@@ -115,8 +117,8 @@ export default function FillGapsQuiz({ phrases }) {
                     !state.isAnswered
                         ? ""
                         : state.checkedInputs[i]
-                        ? "correct-answer"
-                        : "wrong-answer"
+                            ? "correct-answer"
+                            : "wrong-answer"
                 }
                 style={{
                     border: requiredMessage
@@ -168,20 +170,20 @@ export default function FillGapsQuiz({ phrases }) {
                             />
                         </>
                     ) : (
-                        <>
-                            <p>{text}</p>
-                            <div className={`${hideShow}`}>
-                                <PopUp
-                                    isOpen={requiredMessage}
-                                    text="Заполните все пропуски"
-                                />
-                                <Button
-                                    onClick={checkHandler}
-                                    text="Проверить"
-                                />
-                            </div>
-                        </>
-                    )}
+                            <>
+                                <p>{text}</p>
+                                <div className={`${hideShow}`}>
+                                    <PopUp
+                                        isOpen={requiredMessage}
+                                        text="Заполните все пропуски"
+                                    />
+                                    <Button
+                                        onClick={checkHandler}
+                                        text="Проверить"
+                                    />
+                                </div>
+                            </>
+                        )}
                 </>
             )}
 

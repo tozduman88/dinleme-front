@@ -1,5 +1,5 @@
 export async function addMyPhrase(data) {
-    const url = `https://e790-193-104-145-23.ngrok-free.app/api/v1/users/${data.user_id}`;
+    const url = `http://localhost:3333/api/v1/users/${data.user_id}`;
 
     const response = await fetch(url, {
         method: "PUT",
@@ -15,7 +15,7 @@ export async function addMyPhrase(data) {
 }
 
 export async function checkOraddUser(data) {
-    const url = `https://e790-193-104-145-23.ngrok-free.app/api/v1/users`;
+    const url = `http://localhost:3333/api/v1/users`;
 
     const response = await fetch(url, {
         method: "POST",
@@ -33,10 +33,22 @@ export async function checkOraddUser(data) {
 
 export async function getCurrentUser(chatId) {
     const response = await fetch(
-        `https://e790-193-104-145-23.ngrok-free.app/api/v1/users/${chatId}`
+        `http://localhost:3333/api/v1/users/${chatId}`
     );
     if (!response.ok) {
         throw { message: "Failed to find current user", status: 500 };
+    }
+
+    return response.json();
+}
+
+
+
+export async function getPhrases() {
+    const url = `http://localhost:3333/api/v1/phrases`
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw { message: "Failed to fetch phrases", status: 500 };
     }
 
     return response.json();

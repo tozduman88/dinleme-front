@@ -2,21 +2,31 @@ export const fillGapsReducer = (state, action) => {
     switch (action.type) {
         case "CHECK": {
             const correctAnswers =
-                state.phrases[state.currentQuestionIndex].toReplace;
+                state.phrases[state.currentQuestionIndex].to_replace.split(",")
             const currentInputValues = action.payload;
+            console.log("from reducer correctAnswers", correctAnswers)
+            console.log("from reducer currentInputValues", currentInputValues)
 
             let checkedInputs = [];
 
             for (let i = 0; i < currentInputValues.length; i++) {
                 if (
-                    correctAnswers[i].toLowerCase() ===
-                    currentInputValues[i].toLowerCase()
+                    correctAnswers[i].replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "")
+                        .toLocaleUpperCase("tr-TR")
+                        .split(" ")
+                        .join("") ===
+                    currentInputValues[i].replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "")
+                        .toLocaleUpperCase("tr-TR")
+                        .split(" ")
+                        .join("")
                 ) {
                     checkedInputs.push(true);
                 } else {
                     checkedInputs.push(false);
                 }
             }
+
+            console.log('from reducer checkedInputs', checkedInputs)
 
             const answerIsCorrect = checkedInputs.every(
                 (item) => item === true
@@ -31,6 +41,8 @@ export const fillGapsReducer = (state, action) => {
                 trans: state.phrases[state.currentQuestionIndex].trans,
                 isCorrect: answerIsCorrect,
             };
+
+            console.log("from reducer answer", answer)
 
             return {
                 ...state,

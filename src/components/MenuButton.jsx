@@ -1,7 +1,7 @@
 import styles from "./MenuButton.module.css";
 import PropTypes from "prop-types";
 
-export function MenuButton({ text }) {
+export default function MenuButton({ text }) {
     return <button className={styles.btn}> {text} </button>;
 }
 
