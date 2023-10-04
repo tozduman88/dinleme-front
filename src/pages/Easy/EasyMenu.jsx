@@ -10,7 +10,7 @@ export default function EasyMenu() {
         WebApp.BackButton.show();
     }, []);
 
-    WebApp.onEvent("backButtonClicked", () => navigate("/listen-phrases"));
+    WebApp.onEvent("backButtonClicked", () => navigate("listen-phrases"));
 
     return <QuizMenu />;
 }
