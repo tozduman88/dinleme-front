@@ -63,6 +63,7 @@ a {
     gap: 15px;
     min-height: 80vh;
     align-self: center;
+    animation: fadeInRight 1s ease;
 }
 
 .container {
@@ -73,6 +74,18 @@ a {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    animation: fadeInRight 1s ease;
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 button {
