@@ -1,10 +1,10 @@
 .sideBar {
-    background-color: black;
+    background-color: #0b9e85;
     color: white;
     width: 250px;
     height: 100vh;
     position: fixed;
-    top: 30px;
+    top: 35px;
     bottom: 0;
     left: 0;
     right: 0;

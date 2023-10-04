@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import WebApp from "@twa-dev/sdk";
 import SideBarMenu from "~/components/SideBarMenu";
 import { useState } from "react";
+import StickyUpperBar from "~/components/StickyUpperBar";
 
 // const params = new URLSearchParams(window.location.hash.slice(1));
 // const initDataString = params.get("tgWebAppData");
@@ -23,7 +24,8 @@ function Root() {
 
     return (
         <>
-            <button onClick={toggle}>toggle</button>
+            <StickyUpperBar toggle={toggle} />
+
             <div className="wrapper">
                 <SideBarMenu menuIsOpen={menuIsOpen} toggle={toggle} />
                 <Outlet />
