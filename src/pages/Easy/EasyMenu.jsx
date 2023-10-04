@@ -3,15 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import WebApp from "@twa-dev/sdk";
 
+const tg = window.Telegram.WebApp;
+
 export default function EasyMenu() {
     const navigate = useNavigate();
     useEffect(() => {
-        WebApp.BackButton.show();
+        tg.BackButton.show();
     }, []);
 
-    WebApp.onEvent("backButtonClicked", () =>
-        navigate(-1, { relative: "path" })
-    );
+    tg.onEvent("backButtonClicked", () => navigate("/listen-phrases"));
 
     return <QuizMenu />;
 }
