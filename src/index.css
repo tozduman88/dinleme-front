@@ -35,25 +35,28 @@ body {
     margin: 0 auto;
 }
 
-#root {
+a {
+    text-decoration: none;
+}
+
+/* #root {
     display: grid;
     place-items: center;
     gap: 10px;
-}
+} */
 
 .wrapper {
     max-width: 900px;
-    width: 95%;
+    width: 100%;
     min-height: 100vh;
-    display: grid;
-    place-items: center;
-    gap: 10px;
+    /* display: flex; */
+    position: relative;
 }
 
 .quiz {
     background-color: var(--clr-white);
     padding: 20px;
-    width: 100%;
+    width: 95%;
     max-width: 600px;
     border-radius: 10px;
     display: grid;
@@ -65,14 +68,12 @@ body {
 
 .container {
     background-color: var(--clr-white);
-    padding: 20px;
+    padding: 15px;
     width: 100%;
     max-width: 900px;
-    border-radius: 10px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
-    align-self: center;
 }
 
 button {
