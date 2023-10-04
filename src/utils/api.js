@@ -44,7 +44,11 @@ export async function getCurrentUser(chatId) {
 
 export async function getPhrases() {
     const url = `https://424e-193-104-145-15.ngrok-free.app/api/v1/phrases`;
-    const response = await fetch(url);
+    const response = await fetch(url, {
+        headers: {
+            "ngrok-skip-browser-warning": "true",
+        },
+    });
     if (!response.ok) {
         throw { message: "Failed to fetch phrases", status: 500 };
     }
