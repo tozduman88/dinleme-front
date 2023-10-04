@@ -24,7 +24,14 @@ function Root() {
 
     return (
         <>
-            <div className="wrapper">
+            <div
+                className="wrapper"
+                onClick={() => {
+                    if (menuIsOpen) {
+                        setMenuIsOpen(false);
+                    }
+                }}
+            >
                 <StickyUpperBar toggle={toggle} />
                 <SideBarMenu menuIsOpen={menuIsOpen} toggle={toggle} />
                 <Outlet />
