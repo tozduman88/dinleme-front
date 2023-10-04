@@ -24,9 +24,8 @@ function Root() {
 
     return (
         <>
-            <StickyUpperBar toggle={toggle} />
-
             <div className="wrapper">
+                <StickyUpperBar toggle={toggle} />
                 <SideBarMenu menuIsOpen={menuIsOpen} toggle={toggle} />
                 <Outlet />
             </div>
