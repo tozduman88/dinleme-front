@@ -11,5 +11,6 @@ export default function MiddleMenu() {
     }, []);
 
     WebApp.onEvent("backButtonClicked", () => navigate("/listen-phrases"));
+
     return <QuizMenu />;
 }
