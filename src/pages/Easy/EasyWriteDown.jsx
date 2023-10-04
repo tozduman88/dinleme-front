@@ -13,7 +13,7 @@ export default function EasyWriteDown() {
         WebApp.BackButton.show();
     }, []);
 
-    WebApp.onEvent("backButtonClicked", () => navigate("/easy"));
+    WebApp.onEvent("backButtonClicked", () => navigate("/listen-phrases/easy"));
 
     return (
         <>

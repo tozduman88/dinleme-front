@@ -13,7 +13,9 @@ export default function MiddleWriteDown() {
         WebApp.BackButton.show();
     }, []);
 
-    WebApp.onEvent("backButtonClicked", () => navigate("/middle"));
+    WebApp.onEvent("backButtonClicked", () =>
+        navigate("/listen-phrases/middle")
+    );
 
     return (
         <>

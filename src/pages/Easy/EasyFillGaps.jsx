@@ -12,7 +12,7 @@ export default function EasyFillGaps() {
         WebApp.BackButton.show();
     }, []);
 
-    WebApp.onEvent("backButtonClicked", () => navigate("/easy"));
+    WebApp.onEvent("backButtonClicked", () => navigate("/listen-phrases/easy"));
     return (
         <>
             <FillGapsQuiz phrases={phrases} />
