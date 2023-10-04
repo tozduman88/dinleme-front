@@ -2,8 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import FillGapsQuiz from "~/quizzes/FillGapsQuiz/FillGapsQuiz";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-
-const tg = window.Telegram.WebApp;
+import WebApp from "@twa-dev/sdk";
 
 export default function MiddleFillGaps() {
     const phrases = useOutletContext();
@@ -11,10 +10,10 @@ export default function MiddleFillGaps() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        tg.BackButton.show();
+        WebApp.BackButton.show();
     }, []);
 
-    tg.onEvent("backButtonClicked", () => navigate("/middle"));
+    WebApp.onEvent("backButtonClicked", () => navigate("/middle"));
 
     return (
         <>

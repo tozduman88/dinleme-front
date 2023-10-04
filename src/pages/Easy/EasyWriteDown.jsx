@@ -2,8 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import WriteDownQuiz from "~/quizzes/WriteDownQuiz/WriteDownQuiz";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-
-const tg = window.Telegram.WebApp;
+import WebApp from "@twa-dev/sdk";
 
 export default function EasyWriteDown() {
     const phrases = useOutletContext();
@@ -11,10 +10,10 @@ export default function EasyWriteDown() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        tg.BackButton.show();
+        WebApp.BackButton.show();
     }, []);
 
-    tg.onEvent("backButtonClicked", () => navigate("/easy"));
+    WebApp.onEvent("backButtonClicked", () => navigate("/easy"));
 
     return (
         <>
