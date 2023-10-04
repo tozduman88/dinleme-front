@@ -24,6 +24,7 @@ function Root() {
 
     return (
         <>
+            <SideBarMenu menuIsOpen={menuIsOpen} toggle={toggle} />
             <div
                 className="wrapper"
                 onClick={() => {
@@ -33,7 +34,7 @@ function Root() {
                 }}
             >
                 <StickyUpperBar toggle={toggle} />
-                <SideBarMenu menuIsOpen={menuIsOpen} toggle={toggle} />
+
                 <Outlet />
             </div>
         </>
