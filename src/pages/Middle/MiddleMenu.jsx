@@ -10,7 +10,6 @@ export default function MiddleMenu() {
         WebApp.BackButton.show();
     }, []);
 
-    WebApp.onEvent("backButtonClicked", () => navigate("/"));
-
+    WebApp.onEvent("backButtonClicked", () => navigate("/listen-phrases"));
     return <QuizMenu />;
 }

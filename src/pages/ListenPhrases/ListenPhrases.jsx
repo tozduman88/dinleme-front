@@ -1,9 +1,17 @@
 import MenuButton from "~/components/MenuButton";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import WebApp from "@twa-dev/sdk";
 
 const ListenPhrases = () => {
+    const navigate = useNavigate();
 
+    useEffect(() => {
+        WebApp.BackButton.show();
+    }, []);
+
+    WebApp.onEvent("backButtonClicked", () => navigate("/"));
     return (
         <>
             <div className="container">
