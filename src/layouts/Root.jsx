@@ -16,7 +16,7 @@ function Root() {
         WebApp.BackButton.hide();
     }
 
-    const [menuIsOpen, setMenuIsOpen] = useState(true);
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
     const toggle = () => {
         setMenuIsOpen(!menuIsOpen);
     };
