@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
+import WebApp from "@twa-dev/sdk";
 
-const tg = window.Telegram.WebApp;
 // const params = new URLSearchParams(window.location.hash.slice(1));
 // const initDataString = params.get("tgWebAppData");
 // const initData = new URLSearchParams(initDataString);
@@ -11,7 +11,7 @@ function Root() {
     const currentPath = location.pathname;
 
     if (currentPath === "/") {
-        tg.BackButton.hide();
+        WebApp.BackButton.hide();
     }
     return (
         <>
@@ -23,5 +23,3 @@ function Root() {
 }
 
 export default Root;
-
-

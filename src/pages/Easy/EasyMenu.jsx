@@ -1,17 +1,16 @@
 import QuizMenu from "~/components/QuizMenu";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-
-const tg = window.Telegram.WebApp;
+import WebApp from "@twa-dev/sdk";
 
 export default function EasyMenu() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        tg.BackButton.show();
+        WebApp.BackButton.show();
     }, []);
 
-    tg.onEvent("backButtonClicked", () => navigate("/"));
+    WebApp.onEvent("backButtonClicked", () => navigate("/"));
 
     return <QuizMenu />;
 }
