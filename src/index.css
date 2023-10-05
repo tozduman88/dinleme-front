@@ -49,7 +49,8 @@ a {
     max-width: 900px;
     width: 100%;
     min-height: 100vh;
-    /* display: flex; */
+    display: grid;
+    place-items: center;
 }
 
 .quiz {
@@ -70,9 +71,10 @@ a {
     background-color: var(--clr-white);
     padding: 15px;
     width: 100%;
-    max-width: 900px;
+
     display: flex;
     flex-direction: column;
+    place-items: center;
     gap: 15px;
     animation: fadeInRight 1s ease;
 }

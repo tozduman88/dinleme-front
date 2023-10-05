@@ -1,9 +1,9 @@
 .btn {
-    background-color: rgb(157, 154, 150);
+    background-color: gray;
     color: white;
-    font-size: 24px;
-    padding: 10px 30px;
-    min-width: 100%;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
 }
 
 .btn:hover {
