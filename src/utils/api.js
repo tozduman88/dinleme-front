@@ -1,4 +1,4 @@
-const ngrok = "https://f5ca-193-104-145-23.ngrok-free.app";
+const ngrok = "http://localhost:3333";
 
 export async function addMyPhrase(data) {
     const url = `${ngrok}/api/v1/users/${data.user_id}`;
@@ -20,7 +20,6 @@ export async function checkOraddUser(data) {
     const url = `${ngrok}/api/v1/users`;
 
     const response = await fetch(url, {
-        mode: "no-cors",
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -48,7 +47,6 @@ export async function getCurrentUser(chatId) {
 export async function getPhrases() {
     const url = `${ngrok}/api/v1/phrases`;
     const response = await fetch(url, {
-        mode: "no-cors",
         headers: {
             "ngrok-skip-browser-warning": "true",
         },
