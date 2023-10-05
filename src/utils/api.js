@@ -20,6 +20,7 @@ export async function checkOraddUser(data) {
     const url = `${ngrok}/api/v1/users`;
 
     const response = await fetch(url, {
+        mode: "no-cors",
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -34,7 +35,9 @@ export async function checkOraddUser(data) {
 }
 
 export async function getCurrentUser(chatId) {
-    const response = await fetch(`${ngrok}/api/v1/users/${chatId}`);
+    const response = await fetch(`${ngrok}/api/v1/users/${chatId}`, {
+        mode: "no-cors",
+    });
     if (!response.ok) {
         throw { message: "Failed to find current user", status: 500 };
     }
