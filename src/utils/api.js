@@ -45,6 +45,7 @@ export async function getCurrentUser(chatId) {
 export async function getPhrases() {
     const url = `${ngrok}/api/v1/phrases`;
     const response = await fetch(url, {
+        mode: "no-cors",
         headers: {
             "ngrok-skip-browser-warning": "true",
         },
