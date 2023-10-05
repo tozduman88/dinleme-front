@@ -1,4 +1,4 @@
-const ngrok = "http://localhost:3333";
+const ngrok = "https://f5ca-193-104-145-23.ngrok-free.app";
 
 export async function addMyPhrase(data) {
     const url = `${ngrok}/api/v1/users/${data.user_id}`;
