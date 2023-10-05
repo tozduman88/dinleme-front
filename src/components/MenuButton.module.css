@@ -2,8 +2,9 @@
     background-color: gray;
     color: white;
     font-size: 20px;
-    width: 100%;
     padding: 10px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .btn:hover {

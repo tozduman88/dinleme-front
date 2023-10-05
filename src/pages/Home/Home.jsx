@@ -1,5 +1,6 @@
 import MenuButton from "~/components/MenuButton";
 import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
 // import WebApp from "@twa-dev/sdk";
 
 // const params = new URLSearchParams(window.location.hash.slice(1));
@@ -18,10 +19,10 @@ const Home = () => {
                 )} */}
 
             <div className="container">
-                <Link to="listen-phrases">
+                <Link to="listen-phrases" className={styles.link}>
                     <MenuButton text="Фразы на слух" />
                 </Link>
-                <Link to="#">
+                <Link to="#" className={styles.link}>
                     <MenuButton text="Разборы видео" />
                 </Link>
             </div>
