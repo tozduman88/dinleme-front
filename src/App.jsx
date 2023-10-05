@@ -10,47 +10,21 @@ import {
 } from "react-router-dom";
 
 import Root from "~/layouts/Root";
-import EasyMenu from "~/pages/Easy/EasyMenu";
-import MiddleMenu from "~/pages/Middle/MiddleMenu";
-import HardMenu from "~/pages/Hard/HardMenu";
-import EasyFillGaps from "~/pages/Easy/EasyFillGaps";
-import EasyWriteDown from "~/pages/Easy/EasyWriteDown";
-import MiddleFillGaps from "~/pages/Middle/MiddleFillGaps";
-import MiddleWriteDown from "~/pages/Middle/MiddleWriteDown";
-import HardWriteDown from "~/pages/Hard/HardWriteDown";
-import HardFillGaps from "~/pages/Hard/HardFillGaps";
-import EasyLayout from "./layouts/EasyLayout";
-import MiddleLayout from "./layouts/MiddleLayout";
 import Profile from "./pages/Profile/Profile";
-import ListenPhrases from "~/pages/ListenPhrases/ListenPhrases"
-
+import ListenPage from "~/pages/ListenPage/ListenPage";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Root />}>
             <Route path="/" index element={<Home />} />
-            {/* PhrasesLayout */}
-            <Route path="listen-phrases" lazy={() => import("~/layouts/PhrasesLayout")}>
-                <Route index={true} element={<ListenPhrases />} />
-                <Route path="easy" element={<EasyLayout />}>
-                    <Route index={true} element={<EasyMenu />} />
-                    <Route path="write-down" element={<EasyWriteDown />} />
-                    <Route path="fill-gaps" element={<EasyFillGaps />} />
-                </Route>
-                <Route path="middle" element={<MiddleLayout />}>
-                    <Route index={true} element={<MiddleMenu />} />
-                    <Route path="write-down" element={<MiddleWriteDown />} />
-                    <Route path="fill-gaps" element={<MiddleFillGaps />} />
-                </Route>
-                <Route path="hard">
-                    <Route index={true} element={<HardMenu />} />
-                    <Route path="write-down" element={<HardWriteDown />} />
-                    <Route path="fill-gaps" element={<HardFillGaps />} />
-                </Route>
-            </Route>
-            {/* END of PhrasesLayout */}
-
             <Route path="profile/:id" element={<Profile />} />
+
+            <Route
+                path="listen-phrases"
+                lazy={() => import("~/layouts/ListenPageLayout")}
+            >
+                <Route index={true} element={<ListenPage />} />
+            </Route>
         </Route>
     )
 );

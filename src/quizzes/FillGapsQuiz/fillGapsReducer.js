@@ -1,21 +1,22 @@
+/* eslint-disable no-useless-escape */
 export const fillGapsReducer = (state, action) => {
     switch (action.type) {
         case "CHECK": {
             const correctAnswers =
-                state.phrases[state.currentQuestionIndex].to_replace.split(",")
+                state.phrases[state.currentQuestionIndex].to_replace.split(",");
             const currentInputValues = action.payload;
-            console.log("from reducer correctAnswers", correctAnswers)
-            console.log("from reducer currentInputValues", currentInputValues)
 
             let checkedInputs = [];
 
             for (let i = 0; i < currentInputValues.length; i++) {
                 if (
-                    correctAnswers[i].replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "")
+                    correctAnswers[i]
+                        .replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "")
                         .toLocaleUpperCase("tr-TR")
                         .split(" ")
                         .join("") ===
-                    currentInputValues[i].replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "")
+                    currentInputValues[i]
+                        .replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g, "")
                         .toLocaleUpperCase("tr-TR")
                         .split(" ")
                         .join("")
@@ -26,7 +27,7 @@ export const fillGapsReducer = (state, action) => {
                 }
             }
 
-            console.log('from reducer checkedInputs', checkedInputs)
+            console.log("from reducer checkedInputs", checkedInputs);
 
             const answerIsCorrect = checkedInputs.every(
                 (item) => item === true
@@ -42,7 +43,7 @@ export const fillGapsReducer = (state, action) => {
                 isCorrect: answerIsCorrect,
             };
 
-            console.log("from reducer answer", answer)
+            console.log("from reducer answer", answer);
 
             return {
                 ...state,
